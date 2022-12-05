@@ -69,7 +69,6 @@ public class NumberRead {
                 break;
         }
 
-        // System.out.println(text);
         return text;
     }
 
@@ -147,7 +146,13 @@ public class NumberRead {
         int a = (n / 10)*10;
         int b = n % 10;
 
-        String text = checkTensUnit(a) + " " + checkZeroToTen(b);
+        String text = "";
+        
+        if (b == 0) {
+            text = checkTensUnit(a);
+        } else {
+            text = checkTensUnit(a) + " " + checkZeroToTen(b);
+        }
 
         return text;
     }
