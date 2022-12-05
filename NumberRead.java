@@ -26,6 +26,7 @@ public class NumberRead {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number: ");
         int n = scanner.nextInt();
+        scanner.close();
         return n;
     }
 
